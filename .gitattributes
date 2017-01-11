@@ -3,7 +3,13 @@
 *.png binary
 *.jpg binary
 *.gif binary
+*.otf binary
+*.ttf binary
+*.eot binary
+*.woff binary
+*.woff2 binary
 
+*.otf   -text diff
 *.ttf   -text diff
 *.eot   -text diff
 *.woff  -text diff
