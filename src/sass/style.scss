@@ -20,7 +20,7 @@ h3,
 h4,
 h5,
 h6 {
-  margin: 0 0 35px;
+  margin: 0 1rem 35px 1rem;
   text-transform: uppercase;
   font-family: "Montserrat","Helvetica Neue",Helvetica,Arial,sans-serif;
   font-weight: 700;
@@ -28,13 +28,21 @@ h6 {
 }
 
 p {
-  margin: 0 0 25px;
+  margin: 0 2rem 25px 2rem;
   font-size: 18px;
   line-height: 1.5;
   @media(min-width:768px) {
-    margin: 0 0 35px;
+    margin: 0 2rem 35px 2rem;
     font-size: 20px;
     line-height: 1.6;
+  }
+}
+
+pre {
+  margin: 0 2rem 25px 2rem;
+  
+  @media(min-width:768px) {
+    margin: 0 2rem 35px 2rem;
   }
 }
 
@@ -256,7 +264,7 @@ a {
 
 @media(min-width:767px) {
   .content-section {
-    padding-top: 250px;
+    padding-top: 100px;
   }
   
   .download-section {
@@ -367,6 +375,7 @@ body {
 /* Featurettes */
 .featurette {
   margin-top: 5rem;
+  margin-bottom: 5rem;
   text-align: left;
 
   @media(max-width:1199px) {
@@ -379,13 +388,54 @@ body {
 }
 
 /* Thin out the marketing headings */
-/*.featurette-heading {
-  font-weight: 300;
-  line-height: 1;
-  letter-spacing: -.05rem;
-}*/
+.featurette-heading {
+  // font-weight: 300;
+  // line-height: 1;
+  // letter-spacing: -.05rem;
+  margin-top: 2rem;
+}
 
 .feature-img {
   width: 250px;
   margin: 0 auto;
+
+  @media(max-width:1199px) {
+    width: 200px;
+  }
+
+  @media(max-width:767px) {
+    width: 150px;
+  }
 }
+
+/* library tab */
+.active-tab {
+  background-color: $primary;
+  border: 1px solid $primary;
+  color: black;
+  outline: none;
+}
+
+.tab-content {
+  margin-top: 20px;
+
+  h3, p {
+    text-align: left;
+  }
+}
+
+#dev-tools {
+  h3, p {
+    text-align: left;
+  }
+
+  img {
+    width: 100%;
+  }
+}
+
+.even-section {
+  background-color: black;
+}
+
+

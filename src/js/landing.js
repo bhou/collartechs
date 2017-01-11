@@ -34,4 +34,16 @@
         loop: true
       });
   });
+
+  /* library tabs */
+  var tabs = ['#tab-lib-js', '#tab-lib-java'];
+  $('#libraries-tabs > a').click(function(e) {
+    e.preventDefault();
+    
+    $('#libraries-tabs > a').removeClass('active-tab');
+    $(e.target).addClass('active-tab');
+
+    $('.tab-content').hide();
+    $($(e.target).attr('href')).show();
+  });
 }(jQuery));
