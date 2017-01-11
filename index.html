@@ -1,1 +1,336 @@
-Hello World
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>collartechs.com</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="public/assets/bootstrap/css/bootstrap.min.css" crossorigin="anonymous">
+    <link rel="stylesheet" href="public/assets/font-awesome/css/font-awesome.min.css" type="text/css">
+    <!--
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" type="text/css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,700"type="text/css">
+    -->
+    <link rel="stylesheet" href="public/css/style.css" crossorigin="anonymous">
+
+    <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js?autoload=true&amp;skin=sunburst&amp;lang=css" defer="defer"></script>
+  </head>
+  
+  <body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
+    
+    <!-- Navigation -->
+    <nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
+            Menu <i class="fa fa-bars"></i>
+          </button>
+          <a class="navbar-brand page-scroll" href="#page-top">
+            <i class="fa fa-play-circle"></i> <span class="light">Collar</span> Techs
+          </a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
+          <ul class="nav navbar-nav">
+            <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
+            <li class="hidden">
+              <a href="#page-top"></a>
+            </li>
+            <li>
+              <a class="page-scroll" href="#how-does-it-work">How does it work</a>
+            </li>
+            <li>
+              <a class="page-scroll" href="#features">Features</a>
+            </li>
+            <li>
+              <a class="page-scroll" href="#libraries">Libraries</a>
+            </li>
+            <li>
+              <a class="page-scroll" href="#dev-tools">Dev Tools</a>
+            </li>
+            <li>
+              <a class="page-scroll" href="#download">Download</a>
+            </li>
+            <li>
+              <a class="page-scroll" href="#about">About</a>
+            </li>
+          </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+      </div>
+      <!-- /.container -->
+    </nav>
+
+    <!-- Intro Header -->
+    <header class="intro">
+      <div class="intro-body">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+              <h1 class="brand-heading">Collar.Techs</h1>
+              <p class="intro-text">Libraries and dev tools to visualise your software's <span>architecture, data flow, and business logic</span> to make it easier to <span id='goal-text'>Develop, Test, Debug, Monitor ...</span></p>
+              <a href="#how-does-it-work" class="btn btn-circle page-scroll">
+                <i class="fa fa-angle-double-down animated"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- How does it work Section -->
+    <section id="how-does-it-work" class="container-fluide content-section text-center">
+      <div class="row">
+        <div class="col-lg-8 col-lg-offset-2">
+          <h2>How does it work?</h2>
+
+          <div class="row featurette">
+            <div class="col-md-6">
+              <h2 class="featurette-heading">1. Use collar libraries to create your code.</h2>
+              <p class="lead">
+                You can use the simple collar reactive library to build your software from scratch
+              </p>
+              <p class="lead">
+                Or you can use our high-level frameworks to build your software with the traditional OOP or API style
+              </p>
+              <p class="lead">
+                You can even wrap your current code with our library to benefit from all the features
+              </p>
+
+
+            </div>
+            <div class="col-md-6">
+              <pre class="prettyprint" style="text-align: left;">
+// reactive style coding 
+const ns = 
+  collar.ns('com.collartechs.demo');
+
+ns.when('increment action')
+  .do('get the state')
+  .map('increase state by 1')
+  .do('set the state')</pre>
+
+              <pre class="prettyprint" style="text-align: left;">
+// framework style coding
+const app = 
+  Collux.createApp('redux-single-route-app');
+app.store
+  .reduce('INCREMENT', (prevState, action) => {
+    return prevState + 1;
+  })</pre>
+
+            </div>
+          </div> <!-- END OF FEATURETTE -->
+
+          <div class="row featurette">
+            <div class="col-md-6">
+              <pre class="prettyprint" style="text-align: left;">
+collar
+  .use(new DevToolAddon())
+  .use(new TestAddon())
+  ...</pre>
+
+            </div>
+
+            <div class="col-md-6">
+              <h2 class="featurette-heading">2. enable collar addons.</h2>
+              <p class="lead">
+                Use different addons to collect the information
+              </p>
+            
+            </div>
+
+          </div> <!-- END OF FEATURETTE -->
+
+
+          <div class="row featurette">
+            <div class="col-md-6">
+              <h2 class="featurette-heading">3. develop & operate your software with collar dev tool.</h2>
+              <p class="lead">
+                We provide several development & operation tools to help you solve different problems in software development & operation life cycle.
+              </p>
+
+            </div>
+            <div class="col-md-6">
+              <!--<img style="width: 100%" src="public/images/store-data-flow-with-reducer.jpg"/>-->
+              <img style="width: 100%" src="public/images/collux-redux-data-flow-640.gif"/>
+            </div>
+          </div> <!-- END OF FEATURETTE -->
+
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="container-fluide content-section text-center">
+      <div class="row">
+        <div class="col-lg-8 col-lg-offset-2">
+          <h2>Features</h2>
+
+          <!-- BEGIN OF Reactive programming -->
+          <div class="row featurette">
+            <div class="col-md-6">
+              <h2 class="featurette-heading">Reactive Programming</h2>
+              <p class="lead">
+                CollarTechs keeps <a href="http://www.reactivemanifesto.org/">Reactive Manifesto</a> in mind to design the libraries and dev tools. By using the provided reactive programming library, you can easily build your software in a functional programming way.
+              </p>
+            </div>
+            <div class="col-md-6">
+              <img class="img-responsive feature-img" src="public/images/functional-programming.png" />
+            </div>
+          </div> <!-- END OF FEATURETTE -->
+
+          <!-- BEGIN OF live coding everything -->
+          <div class="row featurette">
+            <div class="col-md-6">
+              <img class="img-responsive feature-img" src="public/images/live-coding.png" />
+            </div>
+            <div class="col-md-6">
+              <h2 class="featurette-heading">Live coding everything</h2>
+              <p class="lead">
+                Live coding is no longer a feature only designed for front-end. With collar techs, both of your front-end and back-end application can benefit live coding. You can visualise your software's architecture and data flow in real time.
+              </p>
+            </div>
+          </div> <!-- END OF FEATURETTE -->
+
+          <!-- BEGIN OF playback  -->
+          <div class="row featurette">
+            <div class="col-md-6">
+              <h2 class="featurette-heading">Record & Playback</h2>
+              <p class="lead">
+                You can record your data flow in collar dev tool, and play it back to understand your software's dynamic data flow, and see how data propagates and evolves in your software.
+              </p>
+            </div>
+            <div class="col-md-6">
+              <img class="img-responsive feature-img" src="public/images/playback.png" />
+            </div>
+          </div> <!-- END OF FEATURETTE -->
+
+
+          <!-- BEGIN OF live testing  -->
+          <div class="row featurette">
+            <div class="col-md-6">
+              <img class="img-responsive feature-img" src="public/images/live-testing.png" />
+            </div>
+            <div class="col-md-6">
+              <h2 class="featurette-heading">Live Testing</h2>
+              <p class="lead">
+                You can test your software during the development from the very beginning, without a single line of test code.
+              </p>
+            </div>
+          </div> <!-- END OF FEATURETTE -->
+
+          <!-- BEGIN OF deep testing everything -->
+          <div class="row featurette">
+            <div class="col-md-6">
+              <h2 class="featurette-heading">Deep Testing</h2>
+              <p class="lead">
+                Your tests are no longer limited to the unit test for functions, class and modules. You can easily make cross class, cross module, or event cross process test
+              </p>
+            </div>
+            <div class="col-md-6">
+              <img class="img-responsive feature-img" src="public/images/deep-testing.png" />
+            </div>
+          </div> <!-- END OF FEATURETTE -->
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- Libraries Section -->
+    <section id="libraries" class="container content-section text-center">
+      <div class="row">
+        <div class="col-lg-8 col-lg-offset-2">
+          <h2>Libraries</h2>
+          <p>Grayscale is a free Bootstrap 3 theme created by Start Bootstrap. It can be yours right now, simply download the template on <a href="http://startbootstrap.com/template-overviews/grayscale/">the preview page</a>. The theme is open source, and you can use it for any purpose, personal or commercial.</p>
+          <p>This theme features stock photos by <a href="http://gratisography.com/">Gratisography</a> along with a custom Google Maps skin courtesy of <a href="http://snazzymaps.com/">Snazzy Maps</a>.</p>
+          <p>Grayscale includes full HTML, CSS, and custom JavaScript files along with LESS files for easy customization.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Dev tools Section -->
+    <section id="dev-tools" class="container content-section text-center">
+      <div class="row">
+        <div class="col-lg-8 col-lg-offset-2">
+          <h2>Development & Operation tools</h2>
+          <p>Grayscale is a free Bootstrap 3 theme created by Start Bootstrap. It can be yours right now, simply download the template on <a href="http://startbootstrap.com/template-overviews/grayscale/">the preview page</a>. The theme is open source, and you can use it for any purpose, personal or commercial.</p>
+          <p>This theme features stock photos by <a href="http://gratisography.com/">Gratisography</a> along with a custom Google Maps skin courtesy of <a href="http://snazzymaps.com/">Snazzy Maps</a>.</p>
+          <p>Grayscale includes full HTML, CSS, and custom JavaScript files along with LESS files for easy customization.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Download Section -->
+    <section id="download" class="content-section text-center">
+      <div class="download-section">
+        <div class="container">
+          <div class="col-lg-8 col-lg-offset-2">
+            <h2>Download Grayscale</h2>
+            <p>You can download Grayscale for free on the preview page at Start Bootstrap.</p>
+            <a href="http://startbootstrap.com/template-overviews/grayscale/" class="btn btn-default btn-lg">Visit Download Page</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="container content-section text-center">
+      <div class="row">
+        <div class="col-lg-8 col-lg-offset-2">
+          <h2>About Grayscale</h2>
+          <p>Grayscale is a free Bootstrap 3 theme created by Start Bootstrap. It can be yours right now, simply download the template on <a href="http://startbootstrap.com/template-overviews/grayscale/">the preview page</a>. The theme is open source, and you can use it for any purpose, personal or commercial.</p>
+          <p>This theme features stock photos by <a href="http://gratisography.com/">Gratisography</a> along with a custom Google Maps skin courtesy of <a href="http://snazzymaps.com/">Snazzy Maps</a>.</p>
+          <p>Grayscale includes full HTML, CSS, and custom JavaScript files along with LESS files for easy customization.</p>
+        </div>
+      </div>
+    </section>
+        
+    <!-- Contact Section -->
+    <section id="contact" class="container content-section text-center">
+      <div class="row">
+        <div class="col-lg-8 col-lg-offset-2">
+          <h2>Contact Start Bootstrap</h2>
+          <p>Feel free to email us to provide some feedback on our templates, give us suggestions for new templates and themes, or to just say hello!</p>
+          <p><a href="mailto:feedback@startbootstrap.com">feedback@startbootstrap.com</a>
+          </p>
+          <ul class="list-inline banner-social-buttons">
+            <li>
+              <a href="https://twitter.com/SBootstrap" class="btn btn-default btn-lg"><i class="fa fa-twitter fa-fw"></i> <span class="network-name">Twitter</span></a>
+            </li>
+            <li>
+              <a href="https://github.com/IronSummitMedia/startbootstrap" class="btn btn-default btn-lg"><i class="fa fa-github fa-fw"></i> <span class="network-name">Github</span></a>
+            </li>
+            <li>
+              <a href="https://plus.google.com/+Startbootstrap/posts" class="btn btn-default btn-lg"><i class="fa fa-google-plus fa-fw"></i> <span class="network-name">Google+</span></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer>
+      <div class="container text-center">
+        <p>Copyright &copy; <a href="http://collartechs.com">CollarTechs.com</a> 2017</p>
+      </div>
+    </footer>
+    
+
+    <!-- jQuery first, then Tether, then Bootstrap JS. -->
+    <script src="public/assets/jquery/jquery.min.js" crossorigin="anonymous"></script>
+    <script src="public/assets/bootstrap/js/bootstrap.min.js" crossorigin="anonymous"></script>
+    <!-- Plugin JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+
+    <!-- script for collartechs -->
+    <script type="text/javascript" src="public/js/typed.js"></script>
+    <script type="text/javascript" src="public/js/landing.js"></script>
+
+  </body>
+</html>
