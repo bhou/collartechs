@@ -1,2 +1,5 @@
 # Force LF Line Endings
 * text eol=lf
+*.png binary
+*.jpg binary
+*.gif binary
